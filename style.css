@@ -90,3 +90,50 @@ main {
     color: #fff; /* Cor branca */
     transition: color 0.3s ease; /* Transição suave para cor */
 }
+
+/* Media queries para responsividade */
+
+/* Para tablets (largura máxima 1024px) */
+@media (max-width: 1024px) {
+    .profiles {
+        gap: 30px; /* Reduz o espaçamento entre perfis */
+    }
+
+    .profile img {
+        width: 140px; /* Reduz o tamanho da imagem */
+        height: 140px; /* Reduz o tamanho da imagem */
+    }
+
+    h1 {
+        font-size: 3rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 40px; /* Reduz a margem inferior */
+    }
+}
+
+/* Para dispositivos móveis (largura máxima 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Reduz o padding do body */
+    }
+
+    h1 {
+        font-size: 2rem; /* Reduz ainda mais o tamanho da fonte do título */
+        margin-bottom: 30px; /* Reduz a margem inferior */
+    }
+
+    .profiles {
+        flex-wrap: wrap; /* Permite quebra de linha para perfis */
+        gap: 20px; /* Reduz o espaçamento */
+        justify-content: space-around; /* Distribui os perfis com espaço ao redor */
+    }
+
+    .profile img {
+        width: 100px; /* Reduz o tamanho da imagem para mobile */
+        height: 100px; /* Reduz o tamanho da imagem para mobile */
+        margin-bottom: 10px; /* Reduz a margem inferior da imagem */
+    }
+
+    .profile p {
+        font-size: 1rem; /* Reduz o tamanho da fonte do nome */
+    }
+}
