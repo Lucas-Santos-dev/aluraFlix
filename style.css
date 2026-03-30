@@ -49,6 +49,9 @@ main {
     flex-wrap: nowrap; /* Não quebra linha */
     max-width: 1200px; /* Largura máxima */
     width: 100%; /* Largura total */
+    list-style: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove padding padrão */
+    margin: 0; /* Remove margem padrão */
 }
 
 /* Estilos para cada perfil */
@@ -59,6 +62,24 @@ main {
     cursor: pointer; /* Cursor de ponteiro para indicar clicável */
     transition: all 0.3s ease; /* Transição suave para todas as propriedades */
     position: relative; /* Posicionamento relativo */
+    list-style: none; /* Remove marcadores da lista */
+}
+
+/* Estilos para a lista ordenada dentro do perfil */
+.profile ol {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza */
+    list-style: none; /* Remove marcadores */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margem */
+}
+
+/* Estilos para itens da lista ordenada */
+.profile ol li {
+    display: flex; /* Para centralizar conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
 }
 
 /* Estilos para o hover no perfil */
@@ -67,7 +88,7 @@ main {
 }
 
 /* Estilos para a imagem do perfil */
-.profile img {
+.profile ol li img {
     width: 160px; /* Largura da imagem */
     height: 160px; /* Altura da imagem */
     border-radius: 50%; /* Bordas arredondadas para forma circular */
@@ -77,13 +98,13 @@ main {
 }
 
 /* Estilos para o hover na imagem */
-.profile:hover img {
+.profile:hover ol li img {
     border-color: #fff; /* Mantém borda branca */
     box-shadow: #fff 0px 0px 5px 5px; /* Sombra branca ao redor */
 }
 
 /* Estilos para o parágrafo do perfil */
-.profile p {
+.profile ol li p {
     font-size: 1.4rem; /* Tamanho da fonte */
     font-weight: 300; /* Peso leve */
     text-align: center; /* Alinha ao centro */
@@ -99,7 +120,7 @@ main {
         gap: 30px; /* Reduz o espaçamento entre perfis */
     }
 
-    .profile img {
+    .profile ol li img {
         width: 140px; /* Reduz o tamanho da imagem */
         height: 140px; /* Reduz o tamanho da imagem */
     }
@@ -127,13 +148,13 @@ main {
         justify-content: space-around; /* Distribui os perfis com espaço ao redor */
     }
 
-    .profile img {
+    .profile ol li img {
         width: 100px; /* Reduz o tamanho da imagem para mobile */
         height: 100px; /* Reduz o tamanho da imagem para mobile */
         margin-bottom: 10px; /* Reduz a margem inferior da imagem */
     }
 
-    .profile p {
+    .profile ol li p {
         font-size: 1rem; /* Reduz o tamanho da fonte do nome */
     }
 }
