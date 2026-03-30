@@ -1,0 +1,93 @@
+/* Estilos inspirados na Netflix para AluraFlix */
+
+/* Reset de margens e paddings para todos os elementos, e define box-sizing para incluir bordas e paddings no tamanho total */
+* {
+    margin: 0; /* Remove margens padrão */
+    padding: 0; /* Remove paddings padrão */
+    box-sizing: border-box; /* Faz com que width e height incluam padding e border */
+}
+
+/* Estilos para o corpo da página */
+body {
+    background: linear-gradient(135deg, #000 0%, #141414 100%); /* Fundo gradiente de preto para cinza escuro */
+    color: #fff; /* Cor do texto branca */
+    font-family: 'Netflix Sans', 'Helvetica Neue', Arial, sans-serif; /* Família de fontes similar à Netflix */
+    min-height: 100vh; /* Altura mínima de 100% da viewport */
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+    padding: 20px; /* Padding interno de 20px */
+}
+
+/* Estilos para o título h1 */
+h1 {
+    font-size: 3.5rem; /* Tamanho da fonte grande */
+    font-weight: 400; /* Peso da fonte normal */
+    letter-spacing: -0.02em; /* Espaçamento entre letras ligeiramente reduzido */
+    color: #fff; /* Cor branca */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Sombra no texto para profundidade */
+    text-align: center; /* Alinha o texto ao centro */
+    margin-bottom: 60px; /* Margem inferior para espaçamento */
+}
+
+/* Estilos para o elemento main */
+main {
+    flex: 1; /* Ocupa o espaço restante disponível */
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    justify-content: center; /* Centraliza verticalmente */
+}
+
+/* Estilos para a seção de perfis */
+.profiles {
+    display: flex; /* Usa flexbox para layout horizontal */
+    justify-content: center; /* Centraliza os itens */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 40px; /* Espaçamento entre itens */
+    flex-wrap: nowrap; /* Não quebra linha */
+    max-width: 1200px; /* Largura máxima */
+    width: 100%; /* Largura total */
+}
+
+/* Estilos para cada perfil */
+.profile {
+    display: flex; /* Usa flexbox */
+    flex-direction: column; /* Itens em coluna */
+    align-items: center; /* Centraliza horizontalmente */
+    cursor: pointer; /* Cursor de ponteiro para indicar clicável */
+    transition: all 0.3s ease; /* Transição suave para todas as propriedades */
+    position: relative; /* Posicionamento relativo */
+}
+
+/* Estilos para o hover no perfil */
+.profile:hover {
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho no hover */
+}
+
+/* Estilos para a imagem do perfil */
+.profile img {
+    width: 160px; /* Largura da imagem */
+    height: 160px; /* Altura da imagem */
+    border-radius: 50%; /* Bordas arredondadas para forma circular */
+    object-fit: cover; /* Corta a imagem para caber sem distorcer */
+    border: 4px solid #fff; /* Borda branca */
+    transition: all 0.3s ease; /* Transição suave */
+    margin-bottom: 15px; /* Margem inferior */
+}
+
+/* Estilos para o hover na imagem */
+.profile:hover img {
+    border-color: #fff; /* Mantém borda branca */
+    box-shadow: #fff 0px 0px 5px 5px; /* Sombra branca ao redor */
+}
+
+/* Estilos para o parágrafo do perfil */
+.profile p {
+    font-size: 1.4rem; /* Tamanho da fonte */
+    font-weight: 300; /* Peso leve */
+    text-align: center; /* Alinha ao centro */
+    color: #fff; /* Cor branca */
+    transition: color 0.3s ease; /* Transição suave para cor */
+}
